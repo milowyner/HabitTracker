@@ -29,6 +29,7 @@ struct ActivityDetailView: View {
             
             Button(action: {
                 activities.list[index].completedCount += 1
+                activities.save()
             }, label: {
                 Image(systemName: "checkmark")
                     .font(.title.bold())

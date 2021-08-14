@@ -28,6 +28,7 @@ struct AddActivityView: View {
             Button("Create") {
                 let activity = Activity(name: name, description: description)
                 activities.list.append(activity)
+                activities.save()
                 presentationMode.wrappedValue.dismiss()
             }
             .padding()
