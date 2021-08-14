@@ -14,6 +14,7 @@
 		05CD581326C8611A006780D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CD581226C8611A006780D2 /* Preview Assets.xcassets */; };
 		05CD581626C8611A006780D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CD581426C8611A006780D2 /* LaunchScreen.storyboard */; };
 		05CD581E26C8617F006780D2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD581D26C8617F006780D2 /* Activity.swift */; };
+		05CD582026C86496006780D2 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD581F26C86496006780D2 /* AddActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		05CD581526C8611A006780D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CD581726C8611A006780D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CD581D26C8617F006780D2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		05CD581F26C86496006780D2 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				05CD580926C86118006780D2 /* AppDelegate.swift */,
 				05CD580B26C86118006780D2 /* SceneDelegate.swift */,
 				05CD580D26C86118006780D2 /* ContentView.swift */,
+				05CD581F26C86496006780D2 /* AddActivityView.swift */,
 				05CD581D26C8617F006780D2 /* Activity.swift */,
 				05CD580F26C8611A006780D2 /* Assets.xcassets */,
 				05CD581426C8611A006780D2 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				05CD580C26C86118006780D2 /* SceneDelegate.swift in Sources */,
 				05CD581E26C8617F006780D2 /* Activity.swift in Sources */,
 				05CD580E26C86118006780D2 /* ContentView.swift in Sources */,
+				05CD582026C86496006780D2 /* AddActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

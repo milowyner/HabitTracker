@@ -14,6 +14,8 @@ struct ContentView: View {
         Activity(name: "Exercise", description: "I want to exercise every day so I can have a fit body like Dwayne \"The Rock\" Johnson.")
     ]
     
+    @State private var showingAddActivity = false
+    
     var body: some View {
         NavigationView {
             List(activites) { activity in
@@ -21,11 +23,14 @@ struct ContentView: View {
             }
             .navigationTitle("Habit Tracker")
             .navigationBarItems(trailing: Button(action: {
-                // show "add new activity" screen
+                showingAddActivity = true
             }, label: {
                 Image(systemName: "plus")
                     .imageScale(.large)
             }))
+            .sheet(isPresented: $showingAddActivity, content: {
+                AddActivityView()
+            })
         }
     }
 }
