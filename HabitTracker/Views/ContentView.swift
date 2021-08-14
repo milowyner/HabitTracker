@@ -16,7 +16,13 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(0..<activities.list.count, id: \.self) { index in
-                    NavigationLink(activities.list[index].name, destination: ActivityDetailView(activities: activities, index: index))
+                    NavigationLink(
+                        destination: ActivityDetailView(activities: activities, index: index),
+                        label: {
+                            Text(activities.list[index].name)
+                            Spacer()
+                            Text("\(activities.list[index].completedCount)")
+                        })
                 }
                 .onDelete(perform: { indexSet in
                     activities.list.remove(atOffsets: indexSet)
