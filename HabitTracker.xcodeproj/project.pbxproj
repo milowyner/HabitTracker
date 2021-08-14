@@ -16,6 +16,7 @@
 		05CD581E26C8617F006780D2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD581D26C8617F006780D2 /* Activity.swift */; };
 		05CD582026C86496006780D2 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD581F26C86496006780D2 /* AddActivityView.swift */; };
 		05CD582226C86905006780D2 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD582126C86905006780D2 /* ActivityDetailView.swift */; };
+		05CD582426C8749B006780D2 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD582326C8749B006780D2 /* Activities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		05CD581D26C8617F006780D2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		05CD581F26C86496006780D2 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 		05CD582126C86905006780D2 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		05CD582326C8749B006780D2 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				05CD581F26C86496006780D2 /* AddActivityView.swift */,
 				05CD582126C86905006780D2 /* ActivityDetailView.swift */,
 				05CD581D26C8617F006780D2 /* Activity.swift */,
+				05CD582326C8749B006780D2 /* Activities.swift */,
 				05CD580F26C8611A006780D2 /* Assets.xcassets */,
 				05CD581426C8611A006780D2 /* LaunchScreen.storyboard */,
 				05CD581726C8611A006780D2 /* Info.plist */,
@@ -160,6 +163,7 @@
 				05CD581E26C8617F006780D2 /* Activity.swift in Sources */,
 				05CD580E26C86118006780D2 /* ContentView.swift in Sources */,
 				05CD582026C86496006780D2 /* AddActivityView.swift in Sources */,
+				05CD582426C8749B006780D2 /* Activities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

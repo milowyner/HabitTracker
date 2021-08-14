@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var activites: [Activity] = [
+    @State private var activities = Activities([
         Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently."),
         Activity(name: "Practice the piano", description: "I want to be able to play the piano so I can become the next Mozart."),
         Activity(name: "Exercise", description: "I want to exercise every day so I can have a fit body like Dwayne \"The Rock\" Johnson.")
-    ]
+    ])
     
     @State private var showingAddActivity = false
     
     var body: some View {
         NavigationView {
-            List(activites) { activity in
-                NavigationLink(activity.name, destination: ActivityDetailView(activity: activity))
+            List(0..<activities.list.count) { index in
+                NavigationLink(activities.list[index].name, destination: ActivityDetailView(activities: activities, index: index))
             }
             .navigationTitle("Habit Tracker")
             .navigationBarItems(trailing: Button(action: {

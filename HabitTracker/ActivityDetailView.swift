@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ActivityDetailView: View {
-    let activity: Activity
+    @ObservedObject var activities: Activities
+    let index: Int
     
     var body: some View {
         VStack(spacing: 16) {
-            Text(activity.description)
+            Text(activities.list[index].description)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Spacer()
 
             HStack(spacing: 0) {
                 Text("Completed ")
-                Text("\(activity.completedCount)")
+                Text("\(activities.list[index].completedCount)")
                     .bold()
                 Text(" times")
             }
@@ -27,7 +28,7 @@ struct ActivityDetailView: View {
             .padding(.vertical)
             
             Button(action: {
-                // increment completed count
+                activities.list[index].completedCount += 1
             }, label: {
                 Image(systemName: "checkmark")
                     .font(.title.bold())
@@ -40,14 +41,14 @@ struct ActivityDetailView: View {
             })
         }
         .padding()
-        .navigationTitle(activity.name)
+        .navigationTitle(activities.list[index].name)
     }
 }
 
 struct ActivityDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ActivityDetailView(activity: Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently."))
+            ActivityDetailView(activities: Activities([Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently.")]), index: 0)
         }
     }
 }
