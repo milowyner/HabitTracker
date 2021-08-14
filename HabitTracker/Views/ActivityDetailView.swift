@@ -49,7 +49,7 @@ struct ActivityDetailView: View {
 struct ActivityDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ActivityDetailView(activities: Activities([Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently.")]), index: 0)
+            ActivityDetailView(activities: Activities(), index: 0)
         }
     }
 }

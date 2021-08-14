@@ -42,6 +42,6 @@ struct AddActivityView: View {
 
 struct AddActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivityView(activities: Activities([]))
+        AddActivityView(activities: Activities())
     }
 }

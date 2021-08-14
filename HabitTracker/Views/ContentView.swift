@@ -14,8 +14,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(0..<activities.list.count, id: \.self) { index in
-                NavigationLink(activities.list[index].name, destination: ActivityDetailView(activities: activities, index: index))
+            List {
+                ForEach(0..<activities.list.count, id: \.self) { index in
+                    NavigationLink(activities.list[index].name, destination: ActivityDetailView(activities: activities, index: index))
+                }
+                .onDelete(perform: { indexSet in
+                    activities.list.remove(atOffsets: indexSet)
+                })
             }
             .navigationTitle("Habit Tracker")
             .navigationBarItems(trailing: Button(action: {
