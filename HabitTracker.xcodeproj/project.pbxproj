@@ -66,11 +66,8 @@
 			children = (
 				05CD580926C86118006780D2 /* AppDelegate.swift */,
 				05CD580B26C86118006780D2 /* SceneDelegate.swift */,
-				05CD580D26C86118006780D2 /* ContentView.swift */,
-				05CD581F26C86496006780D2 /* AddActivityView.swift */,
-				05CD582126C86905006780D2 /* ActivityDetailView.swift */,
-				05CD581D26C8617F006780D2 /* Activity.swift */,
-				05CD582326C8749B006780D2 /* Activities.swift */,
+				05CD582726C88592006780D2 /* Views */,
+				05CD582626C88586006780D2 /* Model */,
 				05CD580F26C8611A006780D2 /* Assets.xcassets */,
 				05CD581426C8611A006780D2 /* LaunchScreen.storyboard */,
 				05CD581726C8611A006780D2 /* Info.plist */,
@@ -85,6 +82,25 @@
 				05CD581226C8611A006780D2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05CD582626C88586006780D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05CD581D26C8617F006780D2 /* Activity.swift */,
+				05CD582326C8749B006780D2 /* Activities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05CD582726C88592006780D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05CD580D26C86118006780D2 /* ContentView.swift */,
+				05CD581F26C86496006780D2 /* AddActivityView.swift */,
+				05CD582126C86905006780D2 /* ActivityDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
