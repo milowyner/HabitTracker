@@ -8,7 +8,7 @@
 struct Activity: Identifiable {
     let name: String
     let description: String
-    var completed: Int = 0
+    var completedCount: Int = 0
     
     var id: String { name }
 }

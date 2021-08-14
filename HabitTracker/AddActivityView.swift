@@ -14,8 +14,8 @@ struct AddActivityView: View {
     var body: some View {
         VStack {
             Text("Add new activity")
-                .font(.title)
-                .padding()
+                .font(.title.bold())
+                .padding(.top)
             
             TextField("Name", text: $name)
             TextField("Description", text: $description)
