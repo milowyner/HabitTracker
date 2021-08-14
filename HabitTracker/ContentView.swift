@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var activites: [Activity] = [
+        Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently."),
+        Activity(name: "Practice the piano", description: "I want to be able to play the piano so I can become the next Mozart."),
+        Activity(name: "Exercise", description: "I want to exercise every day so I can have a fit body like Dwayne \"The Rock\" Johnson.")
+    ]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(activites) { activity in
+                Text(activity.name)
+            }
+            .navigationTitle("Habit Tracker")
+            .navigationBarItems(trailing: Button(action: {
+                // show "add new activity" screen
+            }, label: {
+                Image(systemName: "plus")
+                    .imageScale(.large)
+            }))
+        }
     }
 }
 
