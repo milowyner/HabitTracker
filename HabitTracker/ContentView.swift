@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var activities = Activities([
+    @ObservedObject var activities = Activities([
         Activity(name: "Learn Spanish", description: "I want to learn Spanish so I can speak it fluently."),
         Activity(name: "Practice the piano", description: "I want to be able to play the piano so I can become the next Mozart."),
         Activity(name: "Exercise", description: "I want to exercise every day so I can have a fit body like Dwayne \"The Rock\" Johnson.")
@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(0..<activities.list.count) { index in
+            List(0..<activities.list.count, id: \.self) { index in
                 NavigationLink(activities.list[index].name, destination: ActivityDetailView(activities: activities, index: index))
             }
             .navigationTitle("Habit Tracker")
@@ -29,7 +29,7 @@ struct ContentView: View {
                     .imageScale(.large)
             }))
             .sheet(isPresented: $showingAddActivity, content: {
-                AddActivityView()
+                AddActivityView(activities: activities)
             })
         }
     }

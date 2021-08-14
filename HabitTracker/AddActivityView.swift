@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct AddActivityView: View {
+    @ObservedObject var activities: Activities
+    
     @State private var name: String = ""
     @State private var description: String = ""
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -22,7 +26,9 @@ struct AddActivityView: View {
                 .multilineTextAlignment(.leading)
             
             Button("Create") {
-                // add the activity
+                let activity = Activity(name: name, description: description)
+                activities.list.append(activity)
+                presentationMode.wrappedValue.dismiss()
             }
             .padding()
             
@@ -35,6 +41,6 @@ struct AddActivityView: View {
 
 struct AddActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivityView()
+        AddActivityView(activities: Activities([]))
     }
 }
